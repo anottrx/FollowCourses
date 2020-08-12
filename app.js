@@ -5,14 +5,17 @@ const ctx = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
+const saveBtn = document.getElementById("jsSave");
 
-const INITIAL_COLOR = "#2c2c2c";
+const INITIAL_COLOR = "#2c2c2c"; // 검정 비슷한 색
 const CANVAS_SIZE = 700;
 
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
 
 // default
+ctx.fillStyle = "white"; // 시작할 때 배경색은 흰색
+ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 ctx.strokeStyle = INITIAL_COLOR;
 ctx.fillStyle = INITIAL_COLOR;
 ctx.lineWidth = 2.5;
@@ -25,7 +28,7 @@ function stopPainting() {
   painting = false;
 }
 
-function startPainting() {
+function startPainting(event) {
   painting = true;
 }
 
@@ -33,7 +36,6 @@ function onMouseMove(event) {
   const x = event.offsetX;
   const y = event.offsetY;
   if (!painting) {
-    // 클릭하면 실행 중지
     ctx.beginPath();
     ctx.moveTo(x, y);
   } else {
@@ -74,12 +76,25 @@ function handleCanvasClick() {
   }
 }
 
+function handleCM(event) {
+  event.preventDefault(); // 저장하기 위해 우클릭 방지
+}
+
+function handleSaveClick() {
+  const image = canvas.toDataURL(); // default는 png로 저장
+  const link = document.createElement("a"); // 존재하지 않는 링크
+  link.href = image; // 이미지 URL
+  link.download = "PaintJS[🖌]"; // 이미지 이름
+  link.click();
+}
+
 if (canvas) {
   canvas.addEventListener("mousemove", onMouseMove); // 마우스를 움직일 때
   canvas.addEventListener("mousedown", startPainting); // 마우스 눌렀을 때 페인팅 시작
   canvas.addEventListener("mouseup", stopPainting); // 마우스를 놓았을 때 페인팅 중지
   canvas.addEventListener("mouseleave", stopPainting); // 캔버스를 벗어났을 때 페인팅 중지
   canvas.addEventListener("click", handleCanvasClick); // 페인트칠을 위해 캔버스를 클릭했을 때
+  canvas.addEventListener("contextmenu", handleCM); // 우클릭으로 그림 저장 금지
 }
 
 Array.from(colors).forEach((color) =>
@@ -92,4 +107,8 @@ if (range) {
 
 if (mode) {
   mode.addEventListener("click", handleModeClick);
+}
+
+if (saveBtn) {
+  saveBtn.addEventListener("click", handleSaveClick);
 }
