@@ -8,7 +8,7 @@ const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 
 const INITIAL_COLOR = "#2c2c2c"; // 검정 비슷한 색
-const CANVAS_SIZE = 700;
+const CANVAS_SIZE = 500; // 크기 700 -> 500
 
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
@@ -29,7 +29,11 @@ function stopPainting() {
 }
 
 function startPainting(event) {
-  painting = true;
+  /* 캔버스 내에서는 마우스 오른쪽 버튼을 눌러서 그리는 것을 방지
+  button 값을 얻기 위해 event를 사용 */
+  if (event.button === 0) {
+    painting = true;
+  }
 }
 
 function onMouseMove(event) {
