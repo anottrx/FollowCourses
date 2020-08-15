@@ -6,7 +6,7 @@ const USER_LS = "currentUser",
   SHOWING_CN = "showing";
 
 function saveName(text) {
-  localStorage.setItem(USER_LS, text);
+  localStorage.setItem(USER_LS, text); // 로컬에 이름 저장
 }
 
 function handleSubmit(event) {
@@ -30,9 +30,9 @@ function paintGreeting(text) {
 function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
   if (currentUser === null) {
-    askForNmae();
+    askForNmae(); // 이름이 없다면 묻기
   } else {
-    paintGreeting(currentUser);
+    paintGreeting(currentUser); // 이름이 있다면 출력
   }
 }
 
