@@ -1,33 +1,46 @@
-class Human {
-  public name: string;
-  public age: number;
-  public gender: string;
-  constructor(name: string, age: number, gender: string) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+import * as CryptoJS from "crypto-js";
+
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
+
+  static calculateBlockHash = (
+    // 아래에서 실행하기 위해 static
+    index: number,
+    previousHash: string,
+    timestamp: number,
+    data: string
+  ): string =>
+    CryptoJS.SHA256(index + previousHash + timestamp + data).toString();
+
+  constructor(
+    index: number,
+    hash: string,
+    previousHash: string,
+    data: string,
+    timestamp: number
+  ) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previousHash;
+    this.data = data;
+    this.timestamp = timestamp;
   }
 }
 
-/*
-interface Human {
-  // 오직 TS에서만 가능하다. JS에서는 작동하지 않는다.
-  name: string; age: number; gender: string;
-} 
-*/
+// first block
+const genesisBlock: Block = new Block(0, "202020202020", "", "Hello", 123456);
 
-const heyyyy = new Human("heyyyy", 20, "female");
-// const person = { name: "heyyyy", gender: "male", age: 22 };
+let blockchain: Block[] = [genesisBlock];
 
-const sayHi = (person: Human): string => {
-  // const sayHi = (name: string, age: number, gender: string): string => {
-  // 끝에 ?가 붙으면 선택임을 알려준다. (예시: gender?) JS와는 다르게 TS는 파라미터 값에 문제가 생길 경우 에러가 난다.
-  // return `Hello ${name}, you are ${age}, you are a ${gender}`;
-  return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}`;
-};
+const getBlockchain = (): Block[] => blockchain;
 
-console.log(sayHi(heyyyy));
-// console.log(sayHi(person));
-// console.log(sayHi("heyyyy", 24, "male"));
+const getLatestBlock = (): Block => blockchain[blockchain.length - 1];
+// 블록체인에서 가장 최근 것
+
+const getNewTimeStamp = (): number => Math.round(new Date().getTime() / 1000);
 
 export {};
