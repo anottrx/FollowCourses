@@ -4,8 +4,7 @@ import { authService } from "fbase";
 
 function App() {
   const [init, setInit] = useState(false);
-  const [userObj, setUserObj] = useState(null);
-  // 가장 높은 레벨. 이후 Home, Profile, Navigation 순서대로
+  const [userObj, setUserObj] = useState(null); // 가장 높은 레벨
 
   useEffect(() => {
     authService.onAuthStateChanged((user) => {
@@ -16,6 +15,8 @@ function App() {
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args),
         });
+      } else {
+        setUserObj(null); // 로그아웃
       }
       setInit(true);
     });
