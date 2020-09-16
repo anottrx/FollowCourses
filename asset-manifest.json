@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/follow_courses/movie-app-react/static/css/main.9b26caff.chunk.css",
-    "main.js": "/follow_courses/movie-app-react/static/js/main.23d8f22f.chunk.js",
-    "main.js.map": "/follow_courses/movie-app-react/static/js/main.23d8f22f.chunk.js.map",
-    "runtime-main.js": "/follow_courses/movie-app-react/static/js/runtime-main.9aea0590.js",
-    "runtime-main.js.map": "/follow_courses/movie-app-react/static/js/runtime-main.9aea0590.js.map",
-    "static/js/2.80117928.chunk.js": "/follow_courses/movie-app-react/static/js/2.80117928.chunk.js",
-    "static/js/2.80117928.chunk.js.map": "/follow_courses/movie-app-react/static/js/2.80117928.chunk.js.map",
-    "index.html": "/follow_courses/movie-app-react/index.html",
-    "precache-manifest.f7761f55c1930f7b35c8fe4c6242aa55.js": "/follow_courses/movie-app-react/precache-manifest.f7761f55c1930f7b35c8fe4c6242aa55.js",
-    "service-worker.js": "/follow_courses/movie-app-react/service-worker.js",
-    "static/css/main.9b26caff.chunk.css.map": "/follow_courses/movie-app-react/static/css/main.9b26caff.chunk.css.map",
-    "static/js/2.80117928.chunk.js.LICENSE.txt": "/follow_courses/movie-app-react/static/js/2.80117928.chunk.js.LICENSE.txt"
+    "main.css": "/follow_courses/nwitter/static/css/main.e56ef71f.chunk.css",
+    "main.js": "/follow_courses/nwitter/static/js/main.af5a5aa9.chunk.js",
+    "main.js.map": "/follow_courses/nwitter/static/js/main.af5a5aa9.chunk.js.map",
+    "runtime-main.js": "/follow_courses/nwitter/static/js/runtime-main.fc355322.js",
+    "runtime-main.js.map": "/follow_courses/nwitter/static/js/runtime-main.fc355322.js.map",
+    "static/js/2.2f2fa413.chunk.js": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js",
+    "static/js/2.2f2fa413.chunk.js.map": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js.map",
+    "index.html": "/follow_courses/nwitter/index.html",
+    "precache-manifest.ef30ce16f8f4e2491905a6092f64982e.js": "/follow_courses/nwitter/precache-manifest.ef30ce16f8f4e2491905a6092f64982e.js",
+    "service-worker.js": "/follow_courses/nwitter/service-worker.js",
+    "static/css/main.e56ef71f.chunk.css.map": "/follow_courses/nwitter/static/css/main.e56ef71f.chunk.css.map",
+    "static/js/2.2f2fa413.chunk.js.LICENSE.txt": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9aea0590.js",
-    "static/js/2.80117928.chunk.js",
-    "static/css/main.9b26caff.chunk.css",
-    "static/js/main.23d8f22f.chunk.js"
+    "static/js/runtime-main.fc355322.js",
+    "static/js/2.2f2fa413.chunk.js",
+    "static/css/main.e56ef71f.chunk.css",
+    "static/js/main.af5a5aa9.chunk.js"
   ]
 }
