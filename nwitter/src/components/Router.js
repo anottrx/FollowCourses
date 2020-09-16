@@ -18,7 +18,7 @@ const AppRouter = ({ refreshUser, isLoggedIn, userObj }) => {
               margin: "0 auto",
               marginTop: 80,
               display: "flex",
-              justifyCenter: "center",
+              justifyContent: "center",
             }}
           >
             <Route exact path="/">
