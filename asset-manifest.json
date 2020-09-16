@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/follow_courses/nwitter/static/css/main.e56ef71f.chunk.css",
-    "main.js": "/follow_courses/nwitter/static/js/main.af5a5aa9.chunk.js",
-    "main.js.map": "/follow_courses/nwitter/static/js/main.af5a5aa9.chunk.js.map",
-    "runtime-main.js": "/follow_courses/nwitter/static/js/runtime-main.fc355322.js",
-    "runtime-main.js.map": "/follow_courses/nwitter/static/js/runtime-main.fc355322.js.map",
-    "static/js/2.2f2fa413.chunk.js": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js",
-    "static/js/2.2f2fa413.chunk.js.map": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js.map",
-    "index.html": "/follow_courses/nwitter/index.html",
-    "precache-manifest.ef30ce16f8f4e2491905a6092f64982e.js": "/follow_courses/nwitter/precache-manifest.ef30ce16f8f4e2491905a6092f64982e.js",
-    "service-worker.js": "/follow_courses/nwitter/service-worker.js",
-    "static/css/main.e56ef71f.chunk.css.map": "/follow_courses/nwitter/static/css/main.e56ef71f.chunk.css.map",
-    "static/js/2.2f2fa413.chunk.js.LICENSE.txt": "/follow_courses/nwitter/static/js/2.2f2fa413.chunk.js.LICENSE.txt"
+    "main.css": "/follow_courses/static/css/main.e56ef71f.chunk.css",
+    "main.js": "/follow_courses/static/js/main.af5a5aa9.chunk.js",
+    "main.js.map": "/follow_courses/static/js/main.af5a5aa9.chunk.js.map",
+    "runtime-main.js": "/follow_courses/static/js/runtime-main.6add38b9.js",
+    "runtime-main.js.map": "/follow_courses/static/js/runtime-main.6add38b9.js.map",
+    "static/js/2.2632d7a1.chunk.js": "/follow_courses/static/js/2.2632d7a1.chunk.js",
+    "static/js/2.2632d7a1.chunk.js.map": "/follow_courses/static/js/2.2632d7a1.chunk.js.map",
+    "index.html": "/follow_courses/index.html",
+    "precache-manifest.2780a92e04da1269ee5334faf160198a.js": "/follow_courses/precache-manifest.2780a92e04da1269ee5334faf160198a.js",
+    "service-worker.js": "/follow_courses/service-worker.js",
+    "static/css/main.e56ef71f.chunk.css.map": "/follow_courses/static/css/main.e56ef71f.chunk.css.map",
+    "static/js/2.2632d7a1.chunk.js.LICENSE.txt": "/follow_courses/static/js/2.2632d7a1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc355322.js",
-    "static/js/2.2f2fa413.chunk.js",
+    "static/js/runtime-main.6add38b9.js",
+    "static/js/2.2632d7a1.chunk.js",
     "static/css/main.e56ef71f.chunk.css",
     "static/js/main.af5a5aa9.chunk.js"
   ]
