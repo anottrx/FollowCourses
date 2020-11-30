@@ -16,7 +16,7 @@ function handleSubmit(event) {
   saveName(currentValue);
 }
 
-function askForNmae() {
+function askForName() {
   form.classList.add(SHOWING_CN);
   form.addEventListener("submit", handleSubmit);
 }
@@ -30,7 +30,7 @@ function paintGreeting(text) {
 function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
   if (currentUser === null) {
-    askForNmae(); // 이름이 없다면 묻기
+    askForName(); // 이름이 없다면 묻기
   } else {
     paintGreeting(currentUser); // 이름이 있다면 출력
   }
